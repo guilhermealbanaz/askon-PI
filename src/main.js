@@ -1,8 +1,10 @@
 import Vue from 'vue'
-import HomeAskon from '@/views/HomeAskon'
+import App from '@/App'
+import router from './router'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(HomeAskon),
+  router,
+  render: h => h(App)
 }).$mount('#app')
