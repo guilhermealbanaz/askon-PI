@@ -1,16 +1,46 @@
 <template>
-    <div>
-    <div class="box" v-for="resenha in resenhas" :key="resenha.info">
-            <div class='estilo' >
-                <h2 class="texto">{{resenha.description}}</h2>
-                <img class="imagem-resenha" :src="(resenha.src)" :alt="ImgInfo"/>
-            </div>
+    
+    <div class="row">
+        <div class="notice">
+
+            <img :src="require('../assets/' + ImgName)" alt="">
+
         </div>
+
+        <div class="notice2">
+
+            <h2>{{ResenhaTitles}}</h2>    
+
+            <p>{{ResenhaContent | truncate(200)}}</p>
+
+            <span class="font-italic">{{ResenhaDate}}</span>
+
+        </div>
+
     </div>
 </template>
 
 <script>
 export default {
+    props:{
+        ImgName:{
+            type:String,
+            required: true,
+        },
+        ResenhaTitles:{
+            type:String,
+            required: true,
+        },
+        ResenhaContent:{
+            type:String,
+            required: true,
+        },
+        ResenhaDate:{
+            type:String,
+            required: true,
+        }
+        
+    },
     data(){
         return{
         resenhas:[
@@ -24,25 +54,31 @@ export default {
 }
 </script>
 
-<style>
-    .box {
-  width: 1800px;
-  height: 250px;
-  border: 1px solid #FE7D20;
-  margin: 50px;
-  display: flex;
-  align-items: center;
-}
-.texto {
-  color: #FE7D20;
-  font-size: 20px;
-}
-.imagem-resenha {
-  height: 200px;
-}
-.estilo {
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
-}
+<style scoped>
+    *{
+        margin-left: 10px
+    }
+    .row{
+        height: 200px;
+        margin-bottom: 30px;
+        display: flex
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        
+    }
+    h2{
+        cursor: pointer;
+        color: #ffff
+    }
+    .notice{
+        width: 200px;
+        height: 200px;
+    }
+    .notice2{
+        width: 1800px;
+    }
+
+    
 </style>
