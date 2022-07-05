@@ -1,19 +1,19 @@
 <template>
     
     <div class="row">
-        <div class="notice">
+        <div class="col-3">
 
-            <img :src="require('../assets/' + ImgName)" alt="">
+            <img draggable="false" :src="require('../assets/' + ImgName)" alt="">
 
         </div>
 
-        <div class="notice2">
+        <div class="col-9">
 
             <h2>{{ResenhaTitles}}</h2>    
 
-            <p>{{ResenhaContent | truncate(200)}}</p>
+            <slot>Resenha Padrão</slot>
 
-            <span class="font-italic">{{ResenhaDate}}</span>
+            <span class="font-italic">{{formatDate(ResenhaDate)}}</span>
 
         </div>
 
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import Utils from "./../mixins/UtilMixin"
 export default {
     props:{
         ImgName:{
@@ -31,53 +32,28 @@ export default {
             type:String,
             required: true,
         },
-        ResenhaContent:{
-            type:String,
-            required: true,
-        },
         ResenhaDate:{
             type:String,
             required: true,
         }
         
     },
-    data(){
-        return{
-        resenhas:[
-            {src: require('@/assets/logo.jpg')}, {description:'Essa é a descrição da imagem 1, Lorem ipsum dolor sit, amet consectetur adipisicing elit'},
-            {src: require('@/assets/logo.jpg')}, {description:'Essa é a descrição da imagem 1, Lorem ipsum dolor sit, amet consectetur adipisicing elit'},
-            {src: require('@/assets/logo.jpg')}, {description:'Essa é a descrição da imagem 1, Lorem ipsum dolor sit, amet consectetur adipisicing elit'},
-            {src: require('@/assets/logo.jpg')}, {description:'Essa é a descrição da imagem 1, Lorem ipsum dolor sit, amet consectetur adipisicing elit'},
-      ]
-        }
-    }
+    mixins:[Utils]
+    
 }
 </script>
 
 <style scoped>
-    *{
-        margin-left: 10px
-    }
     .row{
-        height: 200px;
         margin-bottom: 30px;
-        display: flex
     }
     img{
-        width: 200px;
-        height: 200px;
+        width: 100%;
         
     }
     h2{
         cursor: pointer;
         color: #ffff
-    }
-    .notice{
-        width: 200px;
-        height: 200px;
-    }
-    .notice2{
-        width: 1800px;
     }
 
     

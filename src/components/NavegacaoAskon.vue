@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar">
-        <img src="@/assets/logo.jpg" class="imagem-logo" alt="">
+        <img draggable="false" src="@/assets/logo.jpg" class="imagem-logo" alt="">
         <router-link to="/"><a class="link-nav">Reviews</a></router-link>
         <a class="link-nav">About Us</a>
         <a class="link-nav">Profile</a>

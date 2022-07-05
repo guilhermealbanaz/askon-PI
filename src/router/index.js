@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeAskon from '@/views/HomeAskon.vue';
 import CriarResenhasAskon from '@/views/CriarResenhasAskon.vue'
+import AskonError from '@/components/AskonError.vue' 
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,9 @@ const routes = [
         path:'/criar',
         component: CriarResenhasAskon,
         props: true,
+      },{
+        path: '*',
+        component: AskonError,
       }
     ]
   }
