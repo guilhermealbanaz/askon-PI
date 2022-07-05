@@ -55,9 +55,13 @@ export default {
 
 <style>
   section{
-    padding: 50px 0;
-    margin-top: 25px;
-    background-color: #F37520 ;
+    padding: 696px 0;
+    margin-top: -613px;
+    background-color: #111 ;
+  }
+
+  section p, span{
+    color: #FE7D20;
   }
 
 </style>

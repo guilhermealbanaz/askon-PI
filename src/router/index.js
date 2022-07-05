@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeAskon from '@/views/HomeAskon.vue';
 import CriarResenhasAskon from '@/views/CriarResenhasAskon.vue'
 import AskonError from '@/components/AskonError.vue' 
+import AboutAskon from '@/components/AboutAskon.vue'
+import LoginAskon from '@/views/LoginAskon.vue'
 
 Vue.use(VueRouter);
 
@@ -16,10 +18,21 @@ const routes = [
         component: HomeAskon,
       },
       {
-        path:'/criar',
+        path:'/criar', alias: '/resenha',
         component: CriarResenhasAskon,
         props: true,
-      },{
+      },
+      {
+        path: '/sobre', alias: '/sobrenos',
+        component: AboutAskon,
+        props: true,
+      },
+      {
+        path:'/login',
+        component: LoginAskon,
+        props: true,
+      },
+      {
         path: '*',
         component: AskonError,
       }

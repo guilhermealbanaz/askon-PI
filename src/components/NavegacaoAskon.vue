@@ -2,12 +2,12 @@
     <nav class="navbar">
         <img draggable="false" src="@/assets/logo.jpg" class="imagem-logo" alt="">
         <router-link to="/"><a class="link-nav">Reviews</a></router-link>
-        <a class="link-nav">About Us</a>
+        <router-link to="/sobre"><a class="link-nav">About Us</a></router-link>
         <a class="link-nav">Profile</a>
         <router-link to="/criar"><a class="link-nav">Criar</a></router-link>
         <input type="text" class="busca">
         <a>
-            <div class="perfil"></div>
+            <router-link to='/login'><div class="perfil"></div></router-link>
         </a>
     </nav>
 </template>
@@ -30,9 +30,13 @@ export default {
     border-bottom: 1px solid #FE7D20;
 }
 
+.navbar a{
+    color: #FE7D20;
+}
+
 .imagem-logo {
-    width: 150px;
-    height: 100px;
+    width: 123px;
+    height: 84px;
     margin-right: 50px;
 }
 
