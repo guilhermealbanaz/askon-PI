@@ -10,7 +10,7 @@
                 <input class="input-login" type="password" placeholder="Senha">
                 <a class="texto-link">Esqueceu sua senha?</a>
                 <a ><router-link to="/"><button class="botão-login">Logar</button></router-link></a>
-                <a ><button class="botão-login">Register</button></a>
+                <a ><router-link to="/register"><button class="botão-login">Register</button></router-link></a>
             </div>
         </div>
     </div>    

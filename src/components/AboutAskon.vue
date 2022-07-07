@@ -10,7 +10,6 @@ import NavegacaoAskon from './NavegacaoAskon.vue';
   export default {
     components: {
         NavegacaoAskon
-
     }
   };
 </script>
