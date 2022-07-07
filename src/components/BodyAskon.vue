@@ -2,7 +2,7 @@
   <section>
 
     <div class="container">
-
+      
       <ResenhasAskon
         v-for="resenha in resenhas"
         :key="resenha.id"
@@ -10,9 +10,9 @@
         :ResenhaTitles="resenha.title"
         :ResenhaDate="resenha.date"
       >
-      
+        <router-link to='/individual'>
         <p>{{ resenha.content | truncate(200) }}</p>
-      
+        </router-link>
       </ResenhasAskon>
       
     </div>
