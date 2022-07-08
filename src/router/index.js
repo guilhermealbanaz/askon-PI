@@ -4,9 +4,8 @@ import HomeAskon from '@/views/HomeAskon.vue';
 import CriarResenhasAskon from '@/views/CriarResenhasAskon.vue'
 import AskonError from '@/components/AskonError.vue' 
 import AboutAskon from '@/components/AboutAskon.vue'
-import LoginAskon from '@/views/LoginAskon.vue'
+import LoginAskon from '@/views/LoginAndRegisterAskon.vue'
 import Resenha from '@/views/ResenhaIndividualAskon.vue'
-import Register from '@/views/RegisterAskon.vue'
 
 Vue.use(VueRouter);
 
@@ -37,11 +36,6 @@ const routes = [
       {
         path:'/individual',
         component: Resenha,
-        props: true,
-      },
-      {
-        path:'/register',
-        component: Register,
         props: true,
       },
       {
