@@ -1,5 +1,6 @@
 <template>
   <div class="box-review">
+            <input class="anexo-link" placeholder="Digite aqui o titulo da resenha">
             <textarea placeholder="Digite aqui a sua resenha" name="review" id="review" cols="90" rows="35" class="text-review"></textarea>
             <input class="anexo-link" placeholder="anexar link" type="url" name="" id="">
             <button class="botao-enviar">Publicar</button>
@@ -22,6 +23,7 @@ export default {
     align-items: flex-start;
     margin-left: 90px;
     margin-top: 40px;
+    gap: 40px;
 }
   .text-review {
     resize: none;

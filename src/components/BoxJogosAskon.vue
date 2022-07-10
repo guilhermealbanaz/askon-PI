@@ -21,7 +21,7 @@ export default {
     gap: 20px;
     justify-content: space-between;
     margin-top: 40px;
-    margin-left: 27px;
+    margin-left: 130px;
 }
 .nome-jogo {
     height: 30px;
