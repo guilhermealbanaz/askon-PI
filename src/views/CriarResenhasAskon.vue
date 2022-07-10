@@ -1,6 +1,5 @@
 <template>
     <div>
-    <NavegacaoAskon/>
         <main class="corpo">
             <box-review-askon/>
             <box-jogos-askon/>
@@ -11,10 +10,8 @@
 <script>
 import BoxJogosAskon from '../components/BoxJogosAskon.vue';
 import BoxReviewAskon from '../components/BoxReviewAskon.vue';
-import NavegacaoAskon from '../components/NavegacaoAskon.vue';
 export default {
   components: { 
-    NavegacaoAskon,
     BoxReviewAskon,
     BoxJogosAskon,
     },

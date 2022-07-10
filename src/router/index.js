@@ -2,10 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeAskon from '@/views/HomeAskon.vue';
 import CriarResenhasAskon from '@/views/CriarResenhasAskon.vue'
-import AskonError from '@/components/AskonError.vue' 
 import AboutAskon from '@/components/AboutAskon.vue'
 import LoginAskon from '@/views/LoginAndRegisterAskon.vue'
 import Resenha from '@/views/ResenhaIndividualAskon.vue'
+
 
 Vue.use(VueRouter);
 
@@ -29,21 +29,22 @@ const routes = [
         props: true,
       },
       {
-        path:'/login',
-        component: LoginAskon,
-        props: true,
-      },
-      {
         path:'/individual',
         component: Resenha,
         props: true,
-      },
-      {
-        path: '*',
-        component: AskonError,
       }
     ]
-  }
+  },
+    {
+      path: '',
+      name: 'blank',
+      component: () => import('@/layouts/BlankAskon.vue'),
+      children:[
+        {
+          path: '/login',
+          component: LoginAskon,
+        }
+    ]}
 ]
 
 const router = new VueRouter({

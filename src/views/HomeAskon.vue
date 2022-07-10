@@ -1,16 +1,13 @@
 <template>
     <div>
-        <NavegacaoAskon />
         <BodyAskon></BodyAskon>
     </div>
 </template>
 <script>
 import BodyAskon from "@/components/BodyAskon.vue"
-import NavegacaoAskon from '@/components/NavegacaoAskon.vue'
 export default {
     name: 'App',
     components: {
-        NavegacaoAskon,
         BodyAskon,
     }
 }
