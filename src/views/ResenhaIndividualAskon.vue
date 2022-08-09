@@ -1,12 +1,15 @@
 <template>
   <div class="tudo">
-    <h1>Página em construção :/</h1>
+    <h1>{{resenha.title}}</h1>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['resenha'],
+  mounted(){
+    console.log(this.resenha)
+  }
 }
 </script>
 

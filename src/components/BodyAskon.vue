@@ -9,10 +9,10 @@
         :ImgName="resenha.img"
         :ResenhaTitles="resenha.title"
         :ResenhaDate="resenha.date"
+        
       >
-        <router-link to='/individual'>
-        <p>{{ resenha.content | truncate(200) }}</p>
-        </router-link>
+      
+        <p @click="irParaResenha(resenha)">{{ resenha.content | truncate(200) }}</p>
       </ResenhasAskon>
       
     </div>
@@ -28,6 +28,11 @@ export default {
     return {
         resenhas: []
       }
+  },
+  methods:{
+    irParaResenha(resenha){
+      this.$router.push({name:"Template", params: {resenha, id:resenha.id}})
+    }
   },
   created(){
         this.resenhas = [{

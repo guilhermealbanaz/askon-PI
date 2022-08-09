@@ -29,7 +29,8 @@ const routes = [
         props: true,
       },
       {
-        path:'/individual',
+        name: 'Template',
+        path:`/individual/:id`,
         component: Resenha,
         props: true,
       }
