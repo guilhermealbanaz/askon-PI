@@ -12,8 +12,8 @@
                                     <input class="input-login-1" type="email" placeholder="Email">
                                     <input class="input-login-1" type="password" placeholder="Senha">
                                     <a class="texto-link-1" @click.prevent="ChangeAction('recuperação')">Esqueceu sua senha?</a>
-                                    <a ><router-link to="/"><button class="botão-login-1">Logar</button></router-link></a>
-                                    <a ><button class="botão-login-1" @click.prevent="ChangeAction('register')">Register</button></a>
+                                    <a ><router-link to="/"><button class="botão-login-1">Entrar</button></router-link></a>
+                                    <a ><button class="botão-login-1" @click.prevent="ChangeAction('register')">Cadastrar-se</button></a>
                             </div>
                         </div>
                 </form>
@@ -25,12 +25,12 @@
                     </div>
                         <div class="bloco-register">
                             <div class="conteudo-register">
-                                <h1 class="texto-login">Register</h1>
+                                <h1 class="texto-login">Cadastre-se</h1>
                                     <input class="input-register" type="name" placeholder="Nome">
                                     <input class="input-register" type="email" placeholder="Email">
                                     <input class="input-register" type="password" placeholder="Senha">
                                     <input class="input-register" type="password" placeholder="Confirme a senha">
-                                <button class="botão-register">Registrar</button>
+                                <button class="botão-register">Cadastrar</button>
                                 <a class="texto-register" @click.prevent="ChangeAction('login')">Voltar</a>
                             </div>
                         </div>

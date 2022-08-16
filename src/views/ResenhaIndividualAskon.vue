@@ -8,6 +8,9 @@
         :ResenhaDate="resenha.date"
       >
       <div class="conteudo">{{resenha.content}}</div>
+      <template v-slot:criador>
+        <p class='criador'>{{ resenha.creator }}</p>
+      </template>
       </ResenhasAskon>
       <ul class="lista">
         <li class="item">League Of Legends</li>
@@ -40,6 +43,10 @@ export default {
 </script>
 
 <style scoped>
+  .criador{
+    
+    color: #111;
+  }
   .container {
     min-width: 90%;
     min-height: 80%;
@@ -121,5 +128,11 @@ export default {
 }
 .verm{
     background-image: url(../assets/coracaovermelho.png);
+}
+.criador {
+  position: fixed;
+  font-size: 20px;
+  left: 650px;
+  top: 230px;
 }
 </style>

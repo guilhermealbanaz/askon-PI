@@ -8,24 +8,20 @@
         </div>
 
         <div class="">
-
             <h2 class="titulo-resenha">{{ResenhaTitles}}</h2>    <!--TITULO -->
-
             <slot>Resenha Padrão</slot>  <!-- CORPO -->
-
-            <span class="data">{{formatDate(ResenhaDate)}}</span>  <!-- DATA -->
-
+            <span class="data">{{ formatDate(ResenhaDate) }}</span>  <!-- DATA -->
             <span class="data">
                 <slot name='criador'></slot> <!-- CRIADOR -->
             </span>
-
         </div>
 
     </div>
 </template>
 
 <script>
-import Utils from "./../mixins/UtilMixin"
+import Utils from "./../mixins/UtilMixin";
+
 export default {
     props:{
         ImgName:{
