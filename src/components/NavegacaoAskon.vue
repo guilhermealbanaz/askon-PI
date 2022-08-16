@@ -1,11 +1,10 @@
 <template>
     <nav class="navbar">
         <img draggable="false" src="@/assets/logo.jpg" class="imagem-logo" alt="">
-        <router-link to="/"><a class="link-nav">Reviews</a></router-link>
-        <router-link to="/sobre"><a class="link-nav">About Us</a></router-link>
-        <a class="link-nav">Profile</a>
+        <router-link to="/"><a class="link-nav">Resenhas</a></router-link>
+        <router-link to="/sobre"><a class="link-nav">Sobre</a></router-link>
+        <router-link to='/perfil'><a class="link-nav">Perfil</a></router-link>                                               <!-- COLOCAR  -->
         <router-link to="/criar"><a class="link-nav">Criar</a></router-link>
-        <input type="text" class="busca">
         <a>
             <router-link to='/login'><div class="perfil"></div></router-link>
         </a>
@@ -14,7 +13,12 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            
+        }
+    },
+    
 }
 </script>
 
@@ -24,7 +28,7 @@ export default {
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 100px;
     align-items: center;
     background-color: #111111;
     border-bottom: 1px solid #FE7D20;
@@ -65,5 +69,6 @@ export default {
     height: 70px;
     background-color: #FE7D20;
     border-radius: 50%;
+    margin-left: 300px;
 }
 </style>>

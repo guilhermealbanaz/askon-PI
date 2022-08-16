@@ -5,6 +5,8 @@ import CriarResenhasAskon from '@/views/CriarResenhasAskon.vue'
 import AboutAskon from '@/components/AboutAskon.vue'
 import LoginAskon from '@/views/LoginAndRegisterAskon.vue'
 import Resenha from '@/views/ResenhaIndividualAskon.vue'
+import PerfilAskon from '@/views/PerfilAskon.vue'
+
 
 
 Vue.use(VueRouter);
@@ -33,7 +35,7 @@ const routes = [
         path:`/individual/:id`,
         component: Resenha,
         props: true,
-      }
+      },
     ]
   },
     {
@@ -44,6 +46,10 @@ const routes = [
         {
           path: '/login',
           component: LoginAskon,
+        },
+        {
+          path: '/perfil',
+          component: PerfilAskon,
         }
     ]}
 ]
